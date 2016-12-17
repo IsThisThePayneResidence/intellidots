@@ -3,7 +3,7 @@ package ua.edu.hneu.ast.utils
 enum Language {
     CPP14("c++14", ".cpp", "run-cpp.sh"),
     JAVA8("java1.8", ".java", "run-java8.sh"),
-    JAVA_SCRIPT("ECMAscript6", ".js", null),
+    NODEJS("nodejs6.9.2", ".js", "run-nodejs.sh"),
     CS("c#", ".cs", "run-cs.sh"),
     PYTHON27("python2.7", ".py", "run-python2.7.sh"),
     PYTHON35("python3.5", ".py", "run-python3.5.sh"),
