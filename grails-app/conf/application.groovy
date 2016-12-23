@@ -5,6 +5,10 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'intellidots.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'intellidots.UserRole'
 grails.plugin.springsecurity.authority.className = 'intellidots.Role'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	[pattern: '*',               access: ['permitAll']],
+	[pattern: '**',              access: ['permitAll']],
+	[pattern: '/**',             access: ['permitAll']],
+	[pattern: '/*',              access: ['permitAll']],
 	[pattern: '/',               access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],
 	[pattern: '/index',          access: ['permitAll']],
@@ -33,6 +37,10 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'intellidots.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'intellidots.UserRole'
 grails.plugin.springsecurity.authority.className = 'intellidots.Role'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	[pattern: '*',               access: ['permitAll']],
+	[pattern: '**',              access: ['permitAll']],
+	[pattern: '/**',             access: ['permitAll']],
+	[pattern: '/*',              access: ['permitAll']],
 	[pattern: '/',               access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],
 	[pattern: '/index',          access: ['permitAll']],

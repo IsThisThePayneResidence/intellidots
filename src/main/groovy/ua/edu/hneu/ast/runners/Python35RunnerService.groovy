@@ -6,7 +6,7 @@ class Python35RunnerService implements RunnerService, LinuxRunnerService {
 
     @Override
     String run(String code, String input) {
-        run(Language.PYTHON27, code, input, "code", INPUT, OUTPUT)
+        run(Language.PYTHON35, code, input, "code", INPUT, OUTPUT)
     }
 
     static void main(String[] args) {

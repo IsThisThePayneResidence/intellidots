@@ -1,7 +1,6 @@
 package ua.edu.hneu.ast.runners
 
 import ua.edu.hneu.ast.utils.Language
-import ua.edu.hneu.ast.utils.RunnerUtils
 
 class CppRunnerService implements RunnerService, LinuxRunnerService {
 

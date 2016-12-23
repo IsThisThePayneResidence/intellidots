@@ -1,9 +1,9 @@
 package intellidots
 
-import javax.script.ScriptEngineManager
-
 class BootStrap {
-
+    def tournament = new Tournament(topic: 'Комбинаторика', description: 'Комбинаторика', startDate: new Date(), endDate: new Date(System.currentTimeMillis() + 86400000 * 7)).save()
+    def task = new Task(name: 'Разбиения на слагаемые', htmlBody: '<img src="https://pp.vk.me/c626120/v626120043/46873/lSIDf4WDoAE.jpg"/>', tournament: tournament).save()
+    def test = new Test(input: "1 5 3 2 6", output: "1 2 3 5 6", points: 0, task: task).save()
     def users = [
             [username: 'kudinova', firstName: 'Валерия', lastName: 'Кудинова'],
             [username: 'andrusenko', firstName: 'Иван', lastName: 'Андрусенко'],
@@ -13,13 +13,12 @@ class BootStrap {
             [username: 'tsebro', firstName: 'Денис', lastName: 'Цебро'],
     ]
 
-    def adminRole = new Role(authority: 'Admin')
-    def userRole = new Role(authority: 'User')
+    def adminRole = new Role(authority: 'ROLE_ADMIN')
+    def userRole = new Role(authority: 'ROLE_USER')
 
     def init = { servletContext ->
         adminRole.save()
         userRole.save()
-
         def admin = new User(username: 'admin', password: 'admin', firstName: 'Александр', lastName: 'Щербаков')
         admin.save()
         new UserRole(user: admin, role: adminRole).save()

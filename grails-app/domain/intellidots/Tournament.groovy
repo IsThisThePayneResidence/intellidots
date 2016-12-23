@@ -1,5 +1,8 @@
 package intellidots
 
+import grails.rest.Resource
+
+@Resource(uri='/tournaments')
 class Tournament {
 
     String topic

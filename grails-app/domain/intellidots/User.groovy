@@ -1,8 +1,10 @@
 package intellidots
 
+import grails.rest.Resource
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
 
+@Resource(uri='/users')
 @EqualsAndHashCode(includes = 'username')
 @ToString(includes = 'username', includeNames = true, includePackage = false)
 class User implements Serializable {

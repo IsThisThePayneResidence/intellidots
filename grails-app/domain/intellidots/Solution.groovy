@@ -1,5 +1,8 @@
 package intellidots
 
+import grails.rest.Resource
+
+@Resource(uri='/solutions')
 class Solution {
 
     String language

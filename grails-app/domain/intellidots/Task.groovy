@@ -1,5 +1,8 @@
 package intellidots
 
+import grails.rest.Resource
+
+@Resource(uri='/tasks')
 class Task {
 
     String name
